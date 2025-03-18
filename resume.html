@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   
+   <title>Aishwarya's Portfolio | Home</title>
+   <link rel="icon" href="img/core-img/favicon.ico">
+   <link rel="stylesheet" href="style.css">
+   <link href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" rel="stylesheet">
+</head>
+
+<style>
+    /* Add this CSS to your existing CSS file or in a <style> tag */
+    .icon-box img {
+        width: 100%;  /* Make images responsive */
+        height: 200px; /* Set a fixed height */
+        object-fit: cover; /* Maintain aspect ratio while cropping */
+        border-radius: 10px; /* Optional: Add rounded corners */
+    }
+
+    .icon-box {
+        background-color: #f9f9f9; /* Light background for contrast */
+        border: 1px solid #ddd; /* Border to define space */
+        border-radius: 10px; /* Rounded corners (optional) */
+        padding: 15px; /* Padding for inner content spacing */
+        margin-bottom: 20px; /* Space between items */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    }
+
+    h5, h6 {
+        margin: 10px 0; /* Consistent spacing */
+    }
+
+    /* Adjust list styles */
+    ul {
+        list-style-type: none; /* Remove bullets */
+        padding: 0; /* Remove default padding */
+    }
+
+    li {
+        background: url('checkmark.png') no-repeat left center; /* Optional checkmark image instead of bullets */
+        padding-left: 20px; /* Space for checkmark */
+        margin-bottom: 5px; /* Space between list items */
+    }
+</style>
+
+<body>
+ <!-- Preloader -->
+ <div id="preloader">
+    <div class="medilife-load"></div>
+</div>
+
+<!-- ***** Header Area Start ***** -->
+<header class="header-area">
+    <!-- Top Header Area -->
+    <div class="top-header-area">
+        <div class="container">
+            <div class="row">
+                <div>
+                    <div class="h-100 d-md-flex justify-content-between align-items-center">
+                        <p>Welcome to <span>My Portfolio!</span> I appreciate your visit.</p>
+                        <p>Github: <span><a href="https://github.com/AISHWARYAAU" target="_blank">click me</a></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
+    <!-- Main Header Area -->
+    <div class="main-header-area" id="stickyHeader">
+        <div class="container">
+            <div class="row align-items">
+                <div>
+                    <div class="main-menu">
+                        <nav class="navbar navbar-expand-lg">
+                            <!-- Logo Area -->
+                            <a class="navbar-brand" href="index.html">
+                                <img src="img/core-img/logo.png" alt="Logo">
+                                
+                            </a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#medilifeMenu" aria-controls="medilifeMenu" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse" id="medilifeMenu">
+                                <!-- Menu Area -->
+                                <ul class="navbar-nav ml-auto">
+                                    <li class="nav-item active"><a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a></li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="about-us.html">About Me</a>
+                                            <a class="dropdown-item" href="services.html">Education</a>
+                                            <a class="dropdown-item" href="project.html">Projects</a>
+                                            <a class="dropdown-item" href="experience.html">Experience</a>
+                                            <a class="dropdown-item" href="skills.html">Skills</a>
+                                            <a class="dropdown-item" href="resume.html">Resume</a>
+                                            <a class="dropdown-item" href="contact.html">Contact</a>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link" href="about-us.html">About</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="services.html">Education</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="project.html">Projects</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+  
+    </div>
+
+</header>
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+
+    <script type="text/javascript">
+        // Smooth scrolling for navigation links
+        $(document).ready(function() {
+            $("nav ul li a").on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function() {
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+
+        // Highlight active menu item on scroll
+        $(window).scroll(function() {
+            var scrollPos = $(document).scrollTop();
+            $('nav ul li a').each(function() {
+                var currLink = $(this);
+                var refElement = $(currLink.attr("href"));
+                if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+                    $('nav ul li').removeClass("active");
+                    currLink.parent().addClass("active");
+                } else {
+                    currLink.parent().removeClass("active");
+                }
+            });
+        });
+    </script>
+
+    <!-- ***** Breadcrumb Area Start ***** -->
+    <section class="breadcumb-area bg-img gradient-background-overlay" style="background-image: url(img/bg-img/breadcumb3.jpg);">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <div class="breadcumb-content">
+                        <h3 class="breadcumb-title">Resume</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Breadcrumb Area End ***** -->
+    <section id="links" class="services">
+        <div class="container">
+            <div class="section-title">
+               
+            </div>
+            <div class="row">
+                <div class="col-md-3 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
+                    <a href="https://drive.google.com/file/d/15VGVTuBdCInixhhjy8N5tdXfiaYNpG0s/view?usp=drivesdk" target="_blank">
+                        <div class="icon"><i class="icofont-page"></i></div>
+                    </a>
+                    <h4 class="title"><a href="https://drive.google.com/file/d/15VGVTuBdCInixhhjy8N5tdXfiaYNpG0s/view?usp=drivesdk" target="_blank">click here</a></h4>
+                    <p class="description" style="color:black;">The link contains a downloadable resume</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <footer class="footer-area section-padding-100">
+            <!-- Main Footer Area -->
+          
+            <footer>
+                <div class="bottom-footer-area">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="footer-social-info">
+                                <ul class="list-inline">
+                                    <li class="list-inline-item">
+                                        <a href="https://www.linkedin.com/in/aishwarya-u-98a82a20a/" target="_blank" class="linkedin" aria-label="LinkedIn Profile">
+                                            <i class="bx bxl-linkedin"></i>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="https://github.com/AISHWARYAAU" target="_blank" class="github" aria-label="GitHub Profile">
+                                            <i class="bx bxl-github"></i>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="mailto:aishwarya21824@gmail.com" class="google" aria-label="Email Aishwarya">
+                                            <i class="bx bxl-google"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-12">
+                                <div class="bottom-footer-content">
+                                    <!-- Copyright Text -->
+                                    <div class="copywrite-text">
+                                        <p>
+                                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved |
+                                            This webpage is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="index.html">Aishwarya U</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+          
+    
+        <!-- jQuery (Necessary for All JavaScript Plugins) -->
+        <script src="js/jquery/jquery-2.2.4.min.js"></script>
+        <!-- Popper js -->
+        <script src="js/popper.min.js"></script>
+        <!-- Bootstrap js -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Plugins js -->
+        <script src="js/plugins.js"></script>
+        <!-- Active js -->
+        <script src="js/active.js"></script>
+        
+    <!-- Scripts -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/active.js"></script>
+</body>
+</html>
